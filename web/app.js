@@ -610,7 +610,10 @@ document.addEventListener('change', (event) => {
       queuePreview();
       return;
     }
-    send('toggle', { key, value: e.checked });
+    const action = ['focusSameMonitor', 'focusRestoreOnSwitch'].includes(key)
+      ? 'focusSetting'
+      : 'toggle';
+    send(action, { key, value: e.checked });
   }
   if (e.dataset.focusSetting) {
     const key = e.dataset.focusSetting;

@@ -1,6 +1,6 @@
 param(
     [string]$MakeNSIS = 'makensis',
-    [string]$Version = '1.0.0'
+    [string]$Version = '1.0.1'
 )
 $ErrorActionPreference = 'Stop'
 $root = [IO.Path]::GetFullPath("$PSScriptRoot\..")

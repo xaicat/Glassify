@@ -3,7 +3,7 @@ Unicode true
 !include "LogicLib.nsh"
 !include "x64.nsh"
 !ifndef VERSION
-  !define VERSION "1.0.0"
+  !define VERSION "1.0.1"
 !endif
 Name "Glassify"
 OutFile "${OUTPUT}"
@@ -13,7 +13,7 @@ RequestExecutionLevel user
 SetCompressor /SOLID lzma
 Icon "..\resources\app.ico"
 UninstallIcon "..\resources\app.ico"
-VIProductVersion "1.0.0.0"
+VIProductVersion "1.0.1.0"
 VIAddVersionKey "ProductName" "Glassify"
 VIAddVersionKey "FileDescription" "Glassify per-user installer"
 VIAddVersionKey "FileVersion" "${VERSION}"

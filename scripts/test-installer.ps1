@@ -1,4 +1,4 @@
-param([string]$Version='1.0.0',[switch]$TestStyledPanel)
+param([string]$Version='1.0.1',[switch]$TestStyledPanel)
 $ErrorActionPreference='Stop'
 $root=[IO.Path]::GetFullPath("$PSScriptRoot\..")
 $testPrefix=Join-Path $root ('out\installer-smoke-' + [Guid]::NewGuid().ToString('N'))

@@ -4,7 +4,7 @@
 
 Control window transparency on Windows. Apply one setting across your desktop or save a different appearance for each app.
 
-**Windows 10 and 11, x64 | Version 1.0.0 | BSD-3-Clause**
+**Windows 10 and 11, x64 | Version 1.0.1 | BSD-3-Clause**
 
 ![Global transparency controls](docs/images/global.png)
 
@@ -14,8 +14,8 @@ Get the [latest release](https://github.com/xaicat/Glassify/releases/latest).
 
 | Download | Use |
 | --- | --- |
-| `Glassify-1.0.0-windows-x64-setup.exe` | Install for your Windows account, with Start menu shortcuts and an uninstaller |
-| `Glassify-1.0.0-windows-x64.zip` | Extract the complete folder and run `Glassify.exe` |
+| `Glassify-1.0.1-windows-x64-setup.exe` | Install for your Windows account, with Start menu shortcuts and an uninstaller |
+| `Glassify-1.0.1-windows-x64.zip` | Extract the complete folder and run `Glassify.exe` |
 | `SHA256SUMS.txt` | Verify the downloaded installer or ZIP |
 
 The binaries are unsigned. Compare the SHA-256 checksum before running them. The styled interface needs [Microsoft WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/), normally present on Windows 11. Native fallback controls are available if it is missing.

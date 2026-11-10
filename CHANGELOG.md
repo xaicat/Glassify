@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Fixed the Focus mode switches for Same display only and Restore when switching away reporting "Unknown preference" instead of saving.
+- Added UI regression coverage for turning both preferences on and off and checking their saved values.
+
 ## 1.0.0 - Initial release
 
 - Global and per-app window transparency with separate focused/background opacity.

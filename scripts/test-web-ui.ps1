@@ -158,6 +158,15 @@ try{
     if($config.defaults.activeOpacity -lt 30){throw 'Invalid UI input bypassed native validation'}
     Evaluate 'document.querySelector("[data-page=focus]").click();document.querySelector("[data-focus-setting=focusDelayMs]").value="600";document.querySelector("[data-focus-setting=focusDelayMs]").dispatchEvent(new Event("change",{bubbles:true}));'|Out-Null
     Await-JS 'window.glassify.getState().config.focusDelayMs === 600' 'Focus delay setting did not reach engine'
+    foreach($key in @('focusSameMonitor','focusRestoreOnSwitch')){
+        foreach($value in @($false,$true)){
+            $jsValue=$value.ToString().ToLowerInvariant()
+            Evaluate "{let focusToggle=document.querySelector('[data-toggle=$key]');focusToggle.checked=$jsValue;focusToggle.dispatchEvent(new Event('change',{bubbles:true}));}"|Out-Null
+            Await-JS "window.glassify.getState().config.$key === $jsValue" "Focus preference $key did not update to $jsValue"
+            $config=Get-Content -LiteralPath "$scratch\config.json" -Raw|ConvertFrom-Json
+            if($config.$key -ne $value){throw "Focus preference $key was not persisted"}
+        }
+    }
     $node=(Get-Command node -ErrorAction SilentlyContinue).Source
     $playwright=if($env:GLASSIFY_PLAYWRIGHT_PATH){$env:GLASSIFY_PLAYWRIGHT_PATH}else{Join-Path $root '.tools\browser-tools\node_modules\playwright'}
     if($node -and (Test-Path -LiteralPath $playwright)){

@@ -816,7 +816,7 @@ class Controller {
                    0, nullptr, DI_NORMAL);
         draw_text(dc, theme.brand, L"Glassify", rect(62, 30, 112, 36), text_color);
         draw_text(dc, theme.small, L"WINDOW CONTROL", rect(20, 72, 150, 22), muted);
-        draw_text(dc, theme.small, L"v1.0.0\nBy xaicat\nNative window control", rect(20, 660, 150, 55), muted,
+        draw_text(dc, theme.small, L"v1.0.1\nBy xaicat\nNative window control", rect(20, 660, 150, 55), muted,
                   DT_LEFT | DT_WORDBREAK);
         const wchar_t *titles[]{L"Your windows", L"Find your balance", L"Make it automatic",
                                 L"Stay in control", L"A lighter taskbar"};

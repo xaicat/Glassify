@@ -1,5 +1,9 @@
 # Release verification
 
+## Glassify 1.0.1
+
+Validated locally on the same Windows x64 environment described below. All four CTest suites passed in 52.11 seconds. The styled UI workflow now changes Same display only and Restore when switching away to both off and on, checking native state and the saved configuration after each change. The existing Playwright layout and interaction checks also passed.
+
 ## Glassify 1.0.0
 
 Local validation on 10 November 2026 used Windows x64 build 26300.9711, WebView2 Runtime 157.0.4341.42, Clang 23.1.5/LLVM-MinGW and CMake 4.4.5. The release binaries use an optimized x64 build. NSIS 3.13 produces the per-user installer.

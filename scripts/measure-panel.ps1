@@ -40,7 +40,7 @@ try{
  [GlassifyPanelMeasurement]::Command(255)
  Start-Sleep -Seconds 7
  $hidden=Measure-Group 'tray-hidden' $app.Id
- $report=[ordered]@{version='1.0.0';uiStyle=$Style;trayMode=$TrayMode;measuredAt=(Get-Date).ToUniversalTime().ToString('o');logicalProcessors=[Environment]::ProcessorCount;notes='Production controller, empty rules, mouse hook enabled. Includes controller/helper and all surviving child WebView2 processes. Visible panel is static; excludes DWM/GPU and taskbar companion. Working set sum can double-count shared pages.';scenarios=@($visible,$hidden)}
+ $report=[ordered]@{version='1.0.1';uiStyle=$Style;trayMode=$TrayMode;measuredAt=(Get-Date).ToUniversalTime().ToString('o');logicalProcessors=[Environment]::ProcessorCount;notes='Production controller, empty rules, mouse hook enabled. Includes controller/helper and all surviving child WebView2 processes. Visible panel is static; excludes DWM/GPU and taskbar companion. Working set sum can double-count shared pages.';scenarios=@($visible,$hidden)}
  $report|ConvertTo-Json -Depth 7|Set-Content -LiteralPath "$root\out\panel-performance.json" -Encoding UTF8
  $report|ConvertTo-Json -Depth 7
 }finally{

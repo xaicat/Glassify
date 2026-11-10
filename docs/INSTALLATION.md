@@ -6,8 +6,8 @@ Windows 10 or 11 x64 and an ordinary user account. The styled panel needs Micros
 
 ## Installer
 
-1. Download Glassify-1.0.0-windows-x64-setup.exe and SHA256SUMS.txt from the release page.
-2. Run Get-FileHash .\Glassify-1.0.0-windows-x64-setup.exe -Algorithm SHA256 and compare the result.
+1. Download Glassify-1.0.1-windows-x64-setup.exe and SHA256SUMS.txt from the release page.
+2. Run Get-FileHash .\Glassify-1.0.1-windows-x64-setup.exe -Algorithm SHA256 and compare the result.
 3. Quit any running Glassify copy through Quit and restore.
 4. Run Setup. The initial binaries are unsigned; Windows may display an unrecognized-app warning.
 5. Choose an installation folder. The default is %LocalAppData%\Programs\Glassify.
@@ -18,7 +18,7 @@ The installer adds an Installed apps entry for your account and does not require
 
 ## Portable ZIP
 
-1. Download Glassify-1.0.0-windows-x64.zip and verify its checksum.
+1. Download Glassify-1.0.1-windows-x64.zip and verify its checksum.
 2. Extract the entire ZIP with Extract All.
 3. Run Glassify.exe from the extracted folder.
 4. Keep the helper, WebView2Loader.dll, web assets and notices together. Do not copy only the controller or run it inside the ZIP.
