@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:glassify:config:4",
+  "title": "Glassify settings, schema 4",
+  "type": "object",
+  "required": ["schemaVersion", "rules"],
+  "$defs": {
+    "appearance": {
+      "type": "object",
+      "properties": {
+        "activeOpacity": {
+          "type": "integer",
+          "minimum": 30,
+          "maximum": 100
+        },
+        "inactiveOpacity": {
+          "type": "integer",
+          "minimum": 30,
+          "maximum": 100
+        },
+        "tint": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 7
+        },
+        "tintStrength": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 40
+        }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "const": 4
+    },
+    "taskbarEnabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "taskbarOpacity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 20
+    },
+    "autoApply": {
+      "type": "boolean",
+      "default": false
+    },
+    "mouseControl": {
+      "type": "boolean",
+      "default": true
+    },
+    "focusMaximized": {
+      "type": "boolean",
+      "default": false
+    },
+    "minimizeToTray": {
+      "type": "boolean",
+      "default": true
+    },
+    "closeToTray": {
+      "type": "boolean",
+      "default": true
+    },
+    "powerSaving": {
+      "type": "boolean",
+      "default": true
+    },
+    "hotkeyModifiers": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 15
+    },
+    "hotkeyKey": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 254
+    },
+    "presetId": {
+      "type": "string"
+    },
+    "defaults": {
+      "$ref": "#/$defs/appearance"
+    },
+    "rules": {
+      "type": "array",
+      "maxItems": 512,
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/appearance"
+          }
+        ],
+        "type": "object",
+        "required": ["id", "executable"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "executable": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32768
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "exclude": {
+            "type": "boolean"
+          },
+          "mode": {
+            "const": "opacity"
+          },
+          "filenameOnly": {
+            "type": "boolean"
+          },
+          "windowClass": {
+            "type": "string"
+          },
+          "titlePattern": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "focusFullscreenOnly": {
+      "default": false,
+      "type": "boolean"
+    },
+    "uiTheme": {
+      "type": "string",
+      "enum": ["light", "vscode", "dark", "ember"],
+      "default": "light"
+    },
+    "focusSameMonitor": {
+      "default": true,
+      "type": "boolean"
+    },
+    "focusDelayMs": {
+      "default": 350,
+      "maximum": 1500,
+      "type": "integer",
+      "minimum": 150
+    },
+    "focusExclusions": {
+      "items": {
+        "maxLength": 260,
+        "pattern": "^[^/\\\\]+$",
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "maxItems": 64
+    },
+    "focusRestoreOnSwitch": {
+      "default": true,
+      "type": "boolean"
+    },
+    "uiStyle": {
+      "type": "string",
+      "enum": ["minimal", "glass"],
+      "default": "minimal"
+    },
+    "globalTransparency": {
+      "type": "boolean",
+      "default": false
+    },
+    "keepInterfaceReady": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

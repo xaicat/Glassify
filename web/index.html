@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-style="minimal">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Glassify</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to controls</a>
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="icon.png" alt="" width="34" height="34" /><span
+          >Glassify<small>Desktop controls</small></span
+        >
+      </div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav id="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom">
+        <div class="engine-status">
+          <span class="status-dot"></span><span id="engine-state">Connecting</span>
+        </div>
+        <div class="credit">Glassify <span>1.0.0</span><small>Made by xaicat</small></div>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header>
+        <div class="breadcrumb">
+          Workspace <span>/</span>
+          <strong id="breadcrumb">Windows</strong>
+        </div>
+        <div class="header-actions">
+          <button
+            class="icon-button"
+            id="theme-toggle"
+            title="Switch interface theme"
+            aria-label="Switch interface theme"
+          ></button
+          ><button
+            class="button compact"
+            data-action="hide"
+            title="Keep effects running in the system tray"
+          >
+            Hide to tray</button
+          ><button class="button compact" id="pause" data-action="pause">Pause effects</button>
+        </div>
+      </header>
+      <main id="main" tabindex="-1">
+        <div class="page-heading">
+          <div>
+            <h1 id="page-title">Global transparency</h1>
+            <p id="page-description">One switch for your desktop.</p>
+          </div>
+          <span class="badge" id="page-badge">WINDOW CONTROL</span>
+        </div>
+        <div id="page-content"></div>
+      </main>
+      <footer aria-live="polite">
+        <span class="footer-dot"></span><span id="status">Opening your workspace.</span
+        ><button class="text-button" data-action="restore">Restore everything</button>
+      </footer>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

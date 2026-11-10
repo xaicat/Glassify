@@ -1,0 +1,28 @@
+name: Bug report
+description: Report an appearance, restoration, configuration or build failure.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Glassify version or commit
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows build and application version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction and expected/actual behavior
+      description: Include the selected backend, visible surface affected and reset outcome. Review logs for personal data.
+    validations:
+      required: true
+  - type: textarea
+    id: coexistence
+    attributes:
+      label: Other appearance tools and diagnostic details
+      description: Do not upload process dumps or private data publicly.
+

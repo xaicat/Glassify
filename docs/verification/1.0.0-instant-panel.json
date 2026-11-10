@@ -1,0 +1,94 @@
+﻿{
+    "version":  "1.0.0",
+    "uiStyle":  "minimal",
+    "trayMode":  "instant",
+    "measuredAt":  "2026-11-10T11:42:24.4622061Z",
+    "logicalProcessors":  12,
+    "notes":  "Production controller, empty rules, mouse hook enabled. Includes controller/helper and all surviving child WebView2 processes. Visible panel is static; excludes DWM/GPU and taskbar companion. Working set sum can double-count shared pages.",
+    "scenarios":  [
+                      {
+                          "scenario":  "styled-panel-visible-idle",
+                          "seconds":  10.4042959,
+                          "processCount":  8,
+                          "normalizedCpuPercent":  0,
+                          "peakPrivateBytes":  168325120,
+                          "peakWorkingSetBytes":  374747136,
+                          "processes":  [
+                                            {
+                                                "name":  "Glassify",
+                                                "privateBytes":  3588096
+                                            },
+                                            {
+                                                "name":  "GlassifyRecovery",
+                                                "privateBytes":  1368064
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  37900288
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  2723840
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  22302720
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  12017664
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  7618560
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  79360000
+                                            }
+                                        ]
+                      },
+                      {
+                          "scenario":  "tray-hidden",
+                          "seconds":  10.3654612,
+                          "processCount":  8,
+                          "normalizedCpuPercent":  0.050247000426120292,
+                          "peakPrivateBytes":  167923712,
+                          "peakWorkingSetBytes":  385425408,
+                          "processes":  [
+                                            {
+                                                "name":  "Glassify",
+                                                "privateBytes":  3588096
+                                            },
+                                            {
+                                                "name":  "GlassifyRecovery",
+                                                "privateBytes":  1273856
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  37773312
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  3633152
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  22249472
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  11952128
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  7618560
+                                            },
+                                            {
+                                                "name":  "msedgewebview2",
+                                                "privateBytes":  79360000
+                                            }
+                                        ]
+                      }
+                  ]
+}

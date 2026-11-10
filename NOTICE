@@ -1,0 +1,12 @@
+Glassify 1.0.0
+Copyright (c) 2026 xaicat (https://github.com/xaicat)
+Project: https://github.com/xaicat/Glassify
+
+Glassify's application code, interface, documentation, build scripts and supplied artwork use BSD-3-Clause. Retain the copyright notice, license conditions and disclaimer in LICENSE.
+
+JsonCpp 1.9.8 uses the MIT license option in third_party/jsoncpp/LICENSE.
+Microsoft WebView2 SDK 1.0.4314.35 supplies the unmodified header and loader. See LICENSES/WebView2.txt and third_party/webview2/NOTICE.txt. The WebView2 Runtime is governed by Microsoft's terms.
+NSIS installer/compression notices are in LICENSES/NSIS.txt.
+
+Optional taskbar support uses a separate, unmodified TranslucentTB 2026.2 companion under GPL-3.0: https://github.com/TranslucentTB/TranslucentTB/tree/2026.2
+Its authors retain their copyright and license. Glassify does not link its source or bundle its binaries. Explicit setup downloads from the publisher and verifies SHA-256. See docs/TASKBAR.md.

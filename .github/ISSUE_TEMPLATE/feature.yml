@@ -1,0 +1,15 @@
+name: Feature proposal
+description: Propose an improvement with a concrete user outcome.
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Desired behavior and affected Windows/app surfaces
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Possible approach and evidence
+      description: Prefer documented APIs and app-native capabilities. Explain restoration and compatibility implications.
+

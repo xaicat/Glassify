@@ -1,0 +1,11 @@
+﻿{
+    "measuredAt":  "2026-11-10T11:41:48.9820418Z",
+    "warmReopenMs":  [
+                         22.2861,
+                         14.0044,
+                         23.7618
+                     ],
+    "sameDocumentRetained":  true,
+    "lowMemoryDocumentRecreated":  true,
+    "method":  "ShowWindow to visible ready web state, including localhost CDP reconnect; not optical first-paint or frame-time measurement"
+}
